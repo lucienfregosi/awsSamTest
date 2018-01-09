@@ -1,10 +1,8 @@
 
-var time = require('time');
-exports.handler = (event, context, callback) => {
-    var currentTime = new time.Date(); 
-    currentTime.setTimezone("America/Los_Angeles");
-    callback(null, {
-        statusCode: '200',
-        body: 'The time in Loos Angeles is: ' + currentTime.toString(),
-    });
-};
+var AWS = require('aws-sdk');
+     
+
+exports.handler = function(event, context, callback) {  
+  var bucketName = process.env.S3_BUCKET;       
+  callback(null, bucketName);     
+}
