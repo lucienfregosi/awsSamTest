@@ -6,6 +6,13 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs6.10
+      CodeUri: ./
+      Events:
+        MyTimeApi:
+          Type: Api
+          Properties:
+            Path: /TimeResource
+            Method: GET
       Environment:
         Variables: 
           S3_BUCKET: buckettestlmg
