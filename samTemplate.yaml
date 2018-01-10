@@ -5,13 +5,13 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: python3.6
       CodeUri: ./
       Events:
         MyTimeApi:
           Type: Api
           Properties:
-            Path: /TimeResource
+            Path: /GetBucketName
             Method: GET
       Environment:
         Variables: 
