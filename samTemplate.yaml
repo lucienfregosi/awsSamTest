@@ -4,7 +4,7 @@ Resources:
   TestFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: handler
+      Handler: lambda_function.hello_world
       Runtime: python3.6
       CodeUri: ./
       Events:
