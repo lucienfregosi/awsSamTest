@@ -4,4 +4,7 @@ logger.setLevel(logging.INFO)
 
 def hello_world(event, context):
 	logger.info('got event{}'.format(event))
-	return "Hello World"
+
+
+
+	return { "body": "Hello, World" }

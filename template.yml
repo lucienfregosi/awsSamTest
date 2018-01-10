@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  TestFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: lambda_function.hello_world
+      Runtime: python3.6
+      CodeUri: ./
+      Events:
+        MyTimeApi:
+          Type: Api
+          Properties:
+            Path: /GetBucketName
+            Method: GET
+      Environment:
+        Variables: 
+          S3_BUCKET: buckettestlmg
